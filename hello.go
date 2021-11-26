@@ -39,10 +39,14 @@ func foo(){
 	// x = 42
 	// fmt.Printf("%T\n", x)
 	// fmt.Println(x)
-	g = 10000
+	g = 42
 	// fmt.Println(g)
 	// g = int(x)
 	// fmt.Println(g)
+
+	
+
+
 
 	//print g in decimal
 	fmt.Printf("%d\n", g)
@@ -50,5 +54,9 @@ func foo(){
 	fmt.Printf("%b\n", g)
 	//print g in hex
 	fmt.Printf("%#x\n", g)
-
+	//bit shift g
+	a := g << 1
+	fmt.Printf("%d\n", a)
+	fmt.Printf("%b\n", a)
+	fmt.Printf("%#x\n", a)
 }
