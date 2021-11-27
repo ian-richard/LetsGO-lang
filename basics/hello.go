@@ -28,6 +28,11 @@ var x spanner
 //new var with type int
 var g int
 
+//raw string literal
+var imastring string = `i'm a 
+massive
+broken up
+string`
 
 
 func foo(){
@@ -44,19 +49,31 @@ func foo(){
 	// g = int(x)
 	// fmt.Println(g)
 
-	
-
-
-
 	//print g in decimal
-	fmt.Printf("%d\n", g)
+	//fmt.Printf("%d\n", g)
 	//print g in binary 
-	fmt.Printf("%b\n", g)
+	//fmt.Printf("%b\n", g)
 	//print g in hex
-	fmt.Printf("%#x\n", g)
+	//fmt.Printf("%#x\n", g)
 	//bit shift g
-	a := g << 1
-	fmt.Printf("%d\n", a)
-	fmt.Printf("%b\n", a)
-	fmt.Printf("%#x\n", a)
+
+	// a := g << 1
+	// fmt.Printf("%d\n", a)
+	// fmt.Printf("%b\n", a)
+	// fmt.Printf("%#x\n", a)
+
+	//print iamstring using raw string literal
+	//fmt.Println(imastring)
+
+	//iota
+	// give iota a value of 2018
+	const (
+		a = 2018 + iota
+		b
+		c
+		d
+	)
+	//print a, b, c, d
+	fmt.Println(a, b, c, d)
+	
 }
