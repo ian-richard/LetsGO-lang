@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 
 func main() {
@@ -34,3 +36,4 @@ func multipleOfIndex (ints []int) []int {
 	}
 	return result;
 }
+
