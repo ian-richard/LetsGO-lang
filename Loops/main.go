@@ -6,7 +6,8 @@ func main() {
 	//printnums(10)
 	//ascii()
 	//printrune()
-	printyears(1990, 2021)
+	//printyears(1901, 2001)
+	printmodulus()
 }
 
 //func which prints every number between 1 and 10
@@ -39,5 +40,12 @@ func printyears(birthyear int, currentyear int){
 	for birthyear <= currentyear {
 		fmt.Println(birthyear)
 		birthyear++
+	}
+}
+
+//loop to print the modulus for every number between 10 and 100
+func printmodulus(){
+	for i := 10; i <= 100; i++ {
+		fmt.Printf(" when %v is divided by 4, the remainder is% v\n", i, i%4)
 	}
 }
