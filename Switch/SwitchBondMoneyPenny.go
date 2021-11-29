@@ -7,7 +7,7 @@ func main() {
 	fmt.Println(test)
 	var test2 = demoSwitch("notaname")
 	fmt.Println(test2)
-	var test3 = demoSwitch("MoneyPenny")
+	var test3 = demoMulticaseSwitch("Dr No")
 	fmt.Println(test3)
 }
 
@@ -23,5 +23,18 @@ func demoSwitch(name string) string {
 	}
 }
 
+func demoMulticaseSwitch(name string) string {
+	switch name {
+	case "MoneyPenny", "Bond", "Dr No":
+		return "hey gang"
+	case "M":
+		return "M"
+	case "Q":
+		return "Q"
+	default:
+		return "access denied"
+
+	}
+}
 
 
