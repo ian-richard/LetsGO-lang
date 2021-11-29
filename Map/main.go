@@ -30,11 +30,22 @@ func mapPeople() {
 		fmt.Println("Key not found")
 	}
 	//not found
+	fmt.Println("Look up Dr No: ")
 	if v, ok := m["Dr No"]; ok {
-		fmt.Println("Value:", v)
+		fmt.Println("Found: ", v)
 	} else {
 		fmt.Println("Key not found")
 	}
+
+	fmt.Println("\nHow to delete (Austin Powers) a key value pair from a map")
+	if _, ok := m["Austin Powers"]; ok {
+		//fmt.Println("Value:", v)
+		fmt.Println("Deleted:", ok)
+		delete(m, "Austin Powers")
+	} else {
+		fmt.Println("Key not found")
+	}
+	fmt.Println(m) //==> Mr Powers is no more 
 
 	//loop over a composite literal
 	fmt.Println("\nLoop over a composite literal")
