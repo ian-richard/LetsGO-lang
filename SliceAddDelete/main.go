@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main(){
-	sliceOfStates()
+	slicesOfString()
 }
 
 var x = []int{42,43,44,45,46,47,48,49,50,51}
@@ -40,5 +40,22 @@ func sliceOfStates(){
 	
 	for i := 0; i < len(states); i++{
 		fmt.Println(i+1, states[i])
+	}
+}
+
+func slicesOfString(){
+	firstCompositeLiteral := []string{"James", "Bond", "Shaken, not stirred"}
+	secondCompositeLiteral := []string{"Miss", "Moneypenny", "Helloooooo, James."}
+	fmt.Println(firstCompositeLiteral)
+	fmt.Println(secondCompositeLiteral)
+
+	sliceOfSliceOfString := [][]string{firstCompositeLiteral, secondCompositeLiteral}
+	fmt.Println(sliceOfSliceOfString)
+
+	for i, v := range sliceOfSliceOfString{
+		fmt.Println("Record: ", i)
+		for j, k := range v{
+			fmt.Printf("\tIndex position: %v\tValue: %v\n", j, k)
+		}
 	}
 }
