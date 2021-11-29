@@ -7,7 +7,10 @@ import (
 
 func main() {
 
-	compositeliteral()
+	//compositeliteral()
+	//sliceofstings()
+	//sliceofints()
+	slicingtheslice()
  
 // var res = multipleOfIndex([]int{22, -6, 32, 82, 9, 25})
 // fmt.Println(res) //=> [-6 32 25]
@@ -49,3 +52,37 @@ func compositeliteral(){
 	fmt.Printf("%T\n", x)
 }
 
+//slice of ints
+func sliceofints(){
+	x := []int{10,11,12,13,14, 15, 16, 17, 18, 19, 20}
+	for i, v := range x {
+		fmt.Println(i, v)
+	}
+	//print the type of array
+	fmt.Printf("%T\n", x)
+}
+
+func slicingtheslice(){
+	x := []int{10,11,12,13,14, 15, 16, 17, 18, 19, 20}
+	
+	//slice of the array
+	a := x[:5]
+	b := x[1:6]
+	c := x[2:7]
+	d := x[6:]
+	e := x[6:(len(x)-1)]
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
+	fmt.Println(e)
+}
+
+func sliceofstings(){
+	x := []string{"a", "b", "c", "d", "e"}
+	for i, v := range x {
+		fmt.Println(i, v)
+	}
+	//print the type of array
+	fmt.Printf("%T\n", x)
+}
