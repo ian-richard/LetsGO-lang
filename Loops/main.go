@@ -4,7 +4,8 @@ import ("fmt")
 
 func main() {
 	//printnums(10)
-	ascii()
+	//ascii()
+	printrune()
 }
 
 //func which prints every number between 1 and 10
@@ -20,3 +21,13 @@ func ascii(){
 			//num, hexidecimal, unicode + character 
 		}
 	}
+
+// print the rune value of the character once (or three times using j-loop)
+func printrune(){
+	for i := 65; i <= 90; i++ {
+		fmt.Println(i)
+		//for j := 0; j < 3; j++ {
+			fmt.Printf("\t%#U\n", i)
+		//}
+	}
+}
