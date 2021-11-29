@@ -6,9 +6,11 @@ import (
 
 
 func main() {
+
+	compositeliteral()
  
-var res = multipleOfIndex([]int{22, -6, 32, 82, 9, 25})
-fmt.Println(res) //=> [-6 32 25]
+// var res = multipleOfIndex([]int{22, -6, 32, 82, 9, 25})
+// fmt.Println(res) //=> [-6 32 25]
 }
 
 /* 
@@ -35,5 +37,15 @@ func multipleOfIndex (ints []int) []int {
 		}
 	}
 	return result;
+}
+//create array which holds 5 values of type int and assign values to it
+//range over the array an print the index and value of each element
+func compositeliteral(){
+	x := [5]int{21,22,23,24,25}
+	for i, v := range x {
+		fmt.Println(i, v)
+	}
+	//print the type of array
+	fmt.Printf("%T\n", x)
 }
 
