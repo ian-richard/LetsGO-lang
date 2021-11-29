@@ -5,7 +5,8 @@ import ("fmt")
 func main() {
 	//printnums(10)
 	//ascii()
-	printrune()
+	//printrune()
+	printyears(1990, 2021)
 }
 
 //func which prints every number between 1 and 10
@@ -29,5 +30,14 @@ func printrune(){
 		//for j := 0; j < 3; j++ {
 			fmt.Printf("\t%#U\n", i)
 		//}
+	}
+}
+
+//print numbers from years alive to current year, take age and years as args
+func printyears(birthyear int, currentyear int){
+	//for i := birthyear; i <= currentyear; i++ {
+	for birthyear <= currentyear {
+		fmt.Println(birthyear)
+		birthyear++
 	}
 }
