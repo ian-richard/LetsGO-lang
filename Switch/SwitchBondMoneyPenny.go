@@ -3,12 +3,27 @@ package main
 import ("fmt")
 
 func main() {
+	var testcommas = commaSeperatedList("%")
+	fmt.Println(testcommas) //=> true
+
+	var testcommas__false = commaSeperatedList("")
+	fmt.Println(testcommas__false) //=> false
+
 	var test = demoSwitch("Bond")
 	fmt.Println(test)
 	var test2 = demoSwitch("notaname")
 	fmt.Println(test2)
 	var test3 = demoMulticaseSwitch("Dr No")
 	fmt.Println(test3)
+}
+
+func commaSeperatedList(s string) bool {
+	switch s {
+	//case ' ', '?', '&', '=', '#', '+', '%':
+	case " ", "?", "&", "=", "#", "+", "%":
+		return true
+	}
+	return false
 }
 
 func demoSwitch(name string) string {
