@@ -4,7 +4,8 @@ import "fmt"
 
 func main(){
 	//icecream()
-	mapOfTypePerson()
+	//mapOfTypePerson()
+	printVehicle()
 }
 
 func icecream(){
@@ -67,4 +68,41 @@ func mapOfTypePerson(){
 	}
 
 	fmt.Println(m)
+}
+
+type vehicle struct{
+	doors int
+	color string
+}
+
+type truck struct{
+	vehicle
+	fourWheel bool
+}
+
+type sedan struct{
+	vehicle
+	luxury bool
+}
+
+/*Embedding is composition, not inheritance, but Go also does something called “promotion”, whereby the fields or methods of embedded types become available on the outer/embedding type. This provides a sort of automatic delegation and gives the pseudo-impression of “inheritance”*/
+
+func printVehicle(){
+	truck1 := truck{
+		vehicle: vehicle{
+			doors: 2,
+			color: "red",
+		},
+		fourWheel: true,
+	}
+	sedan1 := sedan{
+		vehicle: vehicle{
+			doors: 4,
+			color: "blue",
+		},
+		luxury: true,
+	}
+
+	fmt.Println(truck1.doors, truck1.color, truck1.fourWheel)
+	fmt.Println(sedan1.doors, sedan1.color, sedan1.luxury)
 }
