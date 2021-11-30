@@ -13,11 +13,14 @@ func mapDict(){
 		"bond_james": []string{"martini, shaken, not stirred", "swish cars", "misogyny"},
 		"moneypenny_miss": []string{"JB", "Books", "Computer Science"},
 	}
-
+    //how do add an a record to the map (dictionary)
 	m["no_dr"] = []string{"evil", "more evil", "mean cats"}
 
+	//how to delete a record from the map
+	delete(m, "bond_james")
 
-	
+	//range to iterate over the keys of a map (dictionary) - https://gobyexample.com/range
+
 	// for k, v := range m {
 	// 	fmt.Println(k, v)
 	// }
