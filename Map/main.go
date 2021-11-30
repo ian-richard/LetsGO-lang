@@ -3,7 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	mapPeople();
+	mapDict()
+	//mapPeople();
+}
+
+func mapDict(){
+	//map with key of type string and value of type string
+	m := map[string][]string{
+		"bond_james": []string{"Shaken, not stirred", "martinis", "women"},
+		"moneypenny_miss": []string{"JB", "Books", "Computer Science"},
+	}
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
 }
 
 func mapPeople() {
