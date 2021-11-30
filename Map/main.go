@@ -10,10 +10,14 @@ func main() {
 func mapDict(){
 	//map with key of type string and value of type string
 	m := map[string][]string{
-		"bond_james": []string{"martini, shaken, not stirred", "swish cars", "women"},
+		"bond_james": []string{"martini, shaken, not stirred", "swish cars", "misogyny"},
 		"moneypenny_miss": []string{"JB", "Books", "Computer Science"},
-		"Dr No": []string{"being evil", "ice cream", "movies"},
 	}
+
+	m["no_dr"] = []string{"evil", "more evil", "mean cats"}
+
+
+	
 	// for k, v := range m {
 	// 	fmt.Println(k, v)
 	// }
