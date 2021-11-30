@@ -5,7 +5,8 @@ import "fmt"
 func main(){
 	//icecream()
 	//mapOfTypePerson()
-	printVehicle()
+	//printVehicle()
+	anonymousStruct()
 }
 
 func icecream(){
@@ -105,4 +106,32 @@ func printVehicle(){
 
 	fmt.Println(truck1.doors, truck1.color, truck1.fourWheel)
 	fmt.Println(sedan1.doors, sedan1.color, sedan1.luxury)
+}
+
+//anonymous struct
+func anonymousStruct(){
+	s := struct{
+		first string
+		friends map[string]int
+		favDrinks []string
+	}{
+		first: "James",
+		friends: map[string]int{
+			"Moneypenny": 121,
+			"Q": 191,
+			"M": 001,
+		},
+		favDrinks: []string{
+			"Martini",
+			"expresso martini",
+			"sparking water",
+		},
+	}
+	fmt.Println(s.first)
+	for k, v := range s.friends{
+		fmt.Println(k, v)
+	}
+	for i, v := range s.favDrinks{
+		fmt.Println(i, v)
+	}
 }
