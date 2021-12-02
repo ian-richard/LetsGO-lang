@@ -4,9 +4,20 @@ import "fmt"
 
 func main(){
 	fmt.Println(sumSlice([]int{1,2,3,4}...))
+	fmt.Println(sumSlice(1,2,3))
+
+	fmt.Println(sumSlice__notVariadic([]int{1,2,3,4}))
 	}
 
 func sumSlice(numbs ...int) int {
+	result := 0
+	for _, num := range numbs {
+		result += num
+	}
+	return result
+}
+
+func sumSlice__notVariadic(numbs []int) int {
 	result := 0
 	for _, num := range numbs {
 		result += num
@@ -21,4 +32,5 @@ func foo(num int) int {
 func bar (num int, s string) (int, string) {
 	return num, s
 	}
+
 
