@@ -7,7 +7,8 @@ func main(){
 	// fmt.Println(sumSlice(1,2,3))
 
 	// fmt.Println(sumSlice__notVariadic([]int{1,2,3,4}))
-	fmt.Println(p.speak())
+	//fmt.Println(p.speak())
+	fmt.Println(x(2))
 	}
 
 func sumSlice(numbs ...int) int {
@@ -47,12 +48,12 @@ func (p Person) getNameAndAge() string {
 }
 
 
-// func foo(num int) int {
-// 	return num
-// 	}
+var x = func (num int) int {
+	return num + num
+	}
 
-// func bar (num int, s string) (int, string) {
-// 	return num, s
-// 	}
+func bar (num int, s string) (int, string) {
+	return num, s
+	}
 
 
