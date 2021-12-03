@@ -7,7 +7,9 @@ func main() {
 	//ascii()
 	//printrune()
 	//printyears(1901, 2001)
-	printmodulus()
+	//printmodulus()
+	loop := recursionWithLoop(4)
+	fmt.Println((loop) == 24)
 }
 
 //func which prints every number between 1 and 10
@@ -48,4 +50,13 @@ func printmodulus(){
 	for i := 10; i <= 100; i++ {
 		fmt.Printf(" when %v is divided by 4, the remainder is% v\n", i, i%4)
 	}
+}
+
+//loop with same affect as recursion
+func recursionWithLoop(n int) int{
+	total := 1
+	for ; n > 0; n-- {
+		total *= n
+	}
+	return total
 }
