@@ -1,5 +1,8 @@
 package main
 
+// https://pkg.go.dev/encoding/json#Marshal
+// https://pkg.go.dev/encoding/json#Unmarshal
+
 import (
 	"encoding/json"
 	"fmt"
