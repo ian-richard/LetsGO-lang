@@ -28,6 +28,7 @@ func main() {
 
 	//fmt.Println(people)
 
+	// person struct into JSON using Marshal
 	bs, err := json.Marshal(people)
 	if err != nil {
 		fmt.Println(err)
