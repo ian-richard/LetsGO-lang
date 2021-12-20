@@ -6,9 +6,8 @@ import (
 	"sync"
 )
 
-//NB: Race conditions are problematic. below is an example of bad code. see here for more info and diagram https://www.ardanlabs.com/blog/2013/09/detecting-race-conditions-with-go.html
-
-// use the '-race' flag to run this file, i.e. go run -race main.go
+//A “mutex” is a mutual exclusion lock. Mutexes allow us to lock our code
+// so that only one goroutine can access that locked chunk of code at a time.
 
 func main() {
 	fmt.Println("CPUs:", runtime.NumCPU())
@@ -20,13 +19,17 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(gs)
 
+	var mu sync.Mutex
+
 	for i := 0; i < gs; i++ {
 		go func() {
+			mu.Lock()
 			v := counter
 			// time.Sleep(time.Second)
 			runtime.Gosched()
 			v++
 			counter = v
+			mu.Unlock()
 			wg.Done()
 		}()
 		fmt.Println("Goroutines:", runtime.NumGoroutine())
