@@ -9,6 +9,10 @@ import (
 //A “mutex” is a mutual exclusion lock. Mutexes allow us to lock our code
 // so that only one goroutine can access that locked chunk of code at a time.
 
+//think of mutex as like checking out a book, you can only have one person with a book at the time and you can only check out one book at a time.
+
+//more info https://pkg.go.dev/sync#Mutex
+
 func main() {
 	fmt.Println("CPUs:", runtime.NumCPU())
 	fmt.Println("Goroutines:", runtime.NumGoroutine())
