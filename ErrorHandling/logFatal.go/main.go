@@ -21,7 +21,7 @@ func main() {
 
 	bs, err := json.Marshal(p1)
 	if err != nil {
-		log.Fatal("JSON marshaling failed: ", err)
+		log.Fatalln("JSON marshaling failed: ", err)
 	}
 
 	fmt.Println(string(bs))
